@@ -1,0 +1,18 @@
+{
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontWeight": "400",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 12,
+} 
+
+// {
+//     "editor.suggest.showFolders": true,
+//     "editor.fontFamily": "Fira Code Bold",
+//     "editor.smoothScrolling": true,
+//     "workbench.list.horizontalScrolling": true,
+//     "terminal.integrated.smoothScrolling": true,
+//     "workbench.list.smoothScrolling": true,
+//     "editor.fastScrollSensitivity": 1,
+//     "editor.fontSize": 14,
+//     "editor.fontLigatures": true
+// }
