@@ -14,8 +14,10 @@ import 'package:panel_apk/src/presentation/page/redirect/redirect_page.dart';
 import 'package:panel_apk/src/presentation/page/webview/webview_page.dart';
 
 class ContentBar extends StatelessWidget {
-  const ContentBar({super.key, required this.menu});
+  const ContentBar({super.key, required this.menu, required this.projectId, required this.token});
   final SettingMenu menu;
+  final String projectId;
+  final String token;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,10 @@ class ContentBar extends StatelessWidget {
       case SettingMenu.home:
         return const HomePage();
       case SettingMenu.appInfo:
-        return const AppInfoPage();
+        return AppInfoPage(
+          projectId: projectId,
+          token: token,
+        );
       case SettingMenu.ads:
         return const AdsPage();
       case SettingMenu.webview:

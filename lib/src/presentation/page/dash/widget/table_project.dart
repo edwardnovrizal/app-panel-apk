@@ -97,6 +97,7 @@ class _WTableProjectState extends State<WTableProject> {
                             context: context,
                             typeRoute: TypeRoute.push,
                             path: AppRoute.setting,
+                            projectId: item.id,
                           );
                         },
                         Text(
@@ -110,6 +111,7 @@ class _WTableProjectState extends State<WTableProject> {
                             context: context,
                             typeRoute: TypeRoute.push,
                             path: AppRoute.setting,
+                            projectId: item.id,
                           );
                         },
                         Text(
@@ -122,6 +124,7 @@ class _WTableProjectState extends State<WTableProject> {
                           context: context,
                           typeRoute: TypeRoute.push,
                           path: AppRoute.setting,
+                          projectId: item.id,
                         );
                       },
                           Text(

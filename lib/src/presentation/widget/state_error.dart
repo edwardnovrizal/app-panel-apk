@@ -11,7 +11,7 @@ class WStateError extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: Appsize.symetric(horizontal: 10),
+      padding: Appsize.symetric(horizontal: 10, vertical: 50),
       child: Center(
           child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -21,13 +21,13 @@ class WStateError extends StatelessWidget {
             padding: Appsize.only(bottom: 20),
             child: SvgPicture.asset(
               "assets/svg/state-error.svg",
-              height: 180,
+              height: 200,
               alignment: Alignment.center,
             ),
           ),
           Text(
             message!,
-            style: context.styleText.bodySmall,
+            style: context.styleText.titleSmall,
             textAlign: TextAlign.center,
           ),
         ],

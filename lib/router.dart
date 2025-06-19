@@ -5,6 +5,7 @@ import 'package:panel_apk/src/presentation/page/register/register_page.dart';
 import 'package:panel_apk/src/presentation/page/setting/setting_page.dart';
 
 import 'src/config/route_config.dart';
+import 'src/domain/entities/argumen_entity.dart';
 import 'src/presentation/page/auth/auth_page.dart';
 
 class RouterGenerate {
@@ -19,7 +20,8 @@ class RouterGenerate {
       case AppRoute.dashboard:
         return MaterialPageRoute(builder: (_) => const DashPage());
       case AppRoute.setting:
-        return MaterialPageRoute(builder: (_) => const SettingPage());
+        var arg = settings.arguments as ArgumentEntity;
+        return MaterialPageRoute(builder: (_) => SettingPage(projectId: arg.projectId!));
 
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold());

@@ -4,4 +4,5 @@ class ConfigApi {
   static const String register = "/auth/register";
   static const String login = "/auth/login";
   static const String project = "/project";
+  static const String appinfo = "/appinfo";
 }

@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:panel_apk/router.dart';
 import 'package:panel_apk/src/commons/http_override.dart';
+import 'package:panel_apk/src/presentation/bloc/appinfo/appinfo_bloc.dart';
 import 'package:panel_apk/src/presentation/bloc/project/project_bloc.dart';
 import 'package:panel_apk/src/presentation/bloc/register/register_bloc.dart';
+
 import 'injection.dart' as di;
 import 'src/commons/shared_pref.dart';
 import 'src/config/route_config.dart';
@@ -30,6 +32,7 @@ class MyApp extends StatelessWidget {
         BlocProvider<RegisterBloc>(create: (context) => di.locator<RegisterBloc>()),
         BlocProvider<LoginBloc>(create: (context) => di.locator<LoginBloc>()),
         BlocProvider<ProjectBloc>(create: (context) => di.locator<ProjectBloc>()),
+        BlocProvider<AppinfoBloc>(create: (context) => di.locator<AppinfoBloc>()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

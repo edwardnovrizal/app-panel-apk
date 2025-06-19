@@ -97,10 +97,17 @@ class _LoginPageState extends State<LoginPage> {
                     return const AppLoading();
                   }
                   if (state is LoginError) {
-                    return AppButton(
-                      widget: const Text("Masuk"),
-                      onPressed: _onSubmit,
-                      width: 200,
+                    return Column(
+                      children: [
+                        AppButton(
+                          widget: const Text("Masuk"),
+                          onPressed: _onSubmit,
+                          width: 200,
+                        ),
+                        const SizedBox(height: 20),
+                        Text(state.message,
+                            style: context.styleText.bodySmall!.copyWith(color: context.colorSchema.secondary)),
+                      ],
                     );
                   }
                   if (state is LoginLoading) {
